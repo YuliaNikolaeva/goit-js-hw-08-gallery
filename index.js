@@ -26,16 +26,13 @@ ref.ulGallery.insertAdjacentHTML('beforeend', createGalery(galleryItems));
 const showImg = (e) => {
   e.preventDefault();
     ref.lightBox.classList.add('is-open');
-    ref.bigImg.classList.add('active');
     ref.bigImg.src = e.target.dataset.source;
 };
 
 const closeImg = (e) => {
   ref.lightBox.classList.remove('is-open');
-  ref.bigImg.classList.remove('active');
   ref.bigImg.src = '';
 };
-
 
 const controlGallery = (e) => {
 
@@ -55,5 +52,3 @@ const controlGallery = (e) => {
 
 document.addEventListener('click', controlGallery);
 document.addEventListener("keydown", controlGallery);
-
-
